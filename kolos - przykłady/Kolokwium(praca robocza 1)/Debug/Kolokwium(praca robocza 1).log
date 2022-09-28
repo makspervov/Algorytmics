@@ -1,0 +1,5 @@
+﻿  Kolokwium(praca robocza 1).cpp
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\kolos - przykłady\Kolokwium(praca robocza 1)\Kolokwium(praca robocza 1).cpp(180,24): warning C4101: "i": lokalna zmienna, do której nie istnieje odwołanie
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\kolos - przykłady\Kolokwium(praca robocza 1)\Kolokwium(praca robocza 1).cpp(236): error C4700: użycie niezainicjowanej zmiennej lokalnej "tab"
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\kolos - przykłady\Kolokwium(praca robocza 1)\Kolokwium(praca robocza 1).cpp(245): error C4700: użycie niezainicjowanej zmiennej lokalnej "tab2"
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\kolos - przykłady\Kolokwium(praca robocza 1)\Kolokwium(praca robocza 1).cpp(254): error C4700: użycie niezainicjowanej zmiennej lokalnej "tab3"

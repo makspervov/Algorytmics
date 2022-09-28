@@ -1,0 +1,15 @@
+﻿  Laboratorium3.cpp
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\Lab 03\Laboratorium3\Laboratorium3.cpp(21,29): error C2039: "punkty": не является членом "student".
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\Lab 03\Laboratorium3\Laboratorium3.cpp(11): message : см. объявление "student"
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\Lab 03\Laboratorium3\Laboratorium3.cpp(25,20): error C2039: "punkty": не является членом "student".
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\Lab 03\Laboratorium3\Laboratorium3.cpp(11): message : см. объявление "student"
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\Lab 03\Laboratorium3\Laboratorium3.cpp(31,16): error C2039: "punkty": не является членом "student".
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\Lab 03\Laboratorium3\Laboratorium3.cpp(11): message : см. объявление "student"
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\Lab 03\Laboratorium3\Laboratorium3.cpp(31,38): error C2039: "punkty": не является членом "student".
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\Lab 03\Laboratorium3\Laboratorium3.cpp(11): message : см. объявление "student"
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\Lab 03\Laboratorium3\Laboratorium3.cpp(32,18): error C2039: "punkty": не является членом "student".
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\Lab 03\Laboratorium3\Laboratorium3.cpp(11): message : см. объявление "student"
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\Lab 03\Laboratorium3\Laboratorium3.cpp(62,16): error C2039: "punkty": не является членом "student".
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\Lab 03\Laboratorium3\Laboratorium3.cpp(11): message : см. объявление "student"
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\Lab 03\Laboratorium3\Laboratorium3.cpp(77,110): error C2039: "punkty": не является членом "student".
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\Lab 03\Laboratorium3\Laboratorium3.cpp(11): message : см. объявление "student"
