@@ -1,0 +1,10 @@
+﻿  PA_Poprawa1_MaksymPervov.cpp
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\Poprawa 1\PA_Poprawa1_MaksymPervov\PA_Poprawa1_MaksymPervov.cpp(34,13): warning C4566: character represented by universal-character-name '\u0105' cannot be represented in the current code page (1251)
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\Poprawa 1\PA_Poprawa1_MaksymPervov\PA_Poprawa1_MaksymPervov.cpp(39,21): warning C4566: character represented by universal-character-name '\u0105' cannot be represented in the current code page (1251)
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\Poprawa 1\PA_Poprawa1_MaksymPervov\PA_Poprawa1_MaksymPervov.cpp(51,21): error C2131: expression did not evaluate to a constant
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\Poprawa 1\PA_Poprawa1_MaksymPervov\PA_Poprawa1_MaksymPervov.cpp(51,14): message : failure was caused by a read of a variable outside its lifetime
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\Poprawa 1\PA_Poprawa1_MaksymPervov\PA_Poprawa1_MaksymPervov.cpp(51,14): message : see usage of 'n'
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\Poprawa 1\PA_Poprawa1_MaksymPervov\PA_Poprawa1_MaksymPervov.cpp(58,24): error C3863: array type 'int [n/2+1]' is not assignable
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\Poprawa 1\PA_Poprawa1_MaksymPervov\PA_Poprawa1_MaksymPervov.cpp(63,24): error C3863: array type 'int [n/2+1]' is not assignable
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\Poprawa 1\PA_Poprawa1_MaksymPervov\PA_Poprawa1_MaksymPervov.cpp(74,20): error C3863: array type 'int [n/2+1]' is not assignable
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\Poprawa 1\PA_Poprawa1_MaksymPervov\PA_Poprawa1_MaksymPervov.cpp(107,13): warning C4566: character represented by universal-character-name '\u00F3' cannot be represented in the current code page (1251)

@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1622534166 source:d:\каталог\onedrive - politechnika lubelska\2 semestr\pa\kody\lab11\main.cpp
+	<iostream>
+	<cstdlib>
+	<time.h>
+	"lista.h"
+
+1622400771 d:\каталог\onedrive - politechnika lubelska\2 semestr\pa\kody\lab11\lista.h
+
+1622276722 source:d:\каталог\onedrive - politechnika lubelska\2 semestr\pa\kody\lab11\lista.h
+
+1622402922 source:d:\каталог\onedrive - politechnika lubelska\2 semestr\pa\kody\lab11\jkc.cpp
+	<iostream>
+	"lista.h"
+
+1622278401 source:d:\каталог\onedrive - politechnika lubelska\2 semestr\pa\kody\lab11\dk.cpp
+	<iostream>
+	"lista.h"
+
+1622534953 source:d:\каталог\onedrive - politechnika lubelska\2 semestr\pa\kody\lab11\dkc.cpp
+	<iostream>
+	"lista.h"
+
+1622399636 source:d:\каталог\onedrive - politechnika lubelska\2 semestr\pa\kody\lab11\jk.cpp
+	"lista.h"
+	<iostream>
+

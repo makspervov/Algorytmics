@@ -1,0 +1,321 @@
+#include <iostream>
+#include <cstdlib>
+#include <time.h>
+//-std=c++0x
+
+using namespace std;
+
+//JednoKierunkowa
+struct element_JK{
+    int number;
+    element_JK* next;
+};
+struct single_list{
+    element_JK* head;
+    element_JK* tail;
+    int counter;
+};
+
+void add_tail_JK(single_list&l, int value);
+void add_head_JK(single_list&l, int value);
+void add_position_JK(single_list &l, int value, int position);
+void delete_tail_JK(single_list &l);
+void delete_head_JK(single_list &l);
+void delete_position_JK(single_list &l, int position);
+void show_JK(single_list l);
+bool isEmpty_JK(single_list l);
+
+
+//DwuKierunkowa
+struct element_DK{
+    int number;
+    element_DK* next;
+    element_DK* prev;
+};
+
+struct double_list{
+    element_DK* head;
+    element_DK* tail;
+    int counter;
+};
+
+void add_tail_DK(double_list &l, int value);
+void add_head_DK(double_list &l, int value);
+void add_position_DK(double_list &l, int value, int position);
+void delete_tail_DK(double_list &l);
+void delete_head_DK(double_list &l);
+void delete_position_DK(double_list &l, int position);
+void show_DK(double_list l);
+bool isEmpty_head_DK(double_list l);
+bool isEmpty_tail_DK(double_list l);
+
+int genLiczb(){
+    int
+        a = 1,
+        b = 50;
+    return rand()%(b-a+1)+a;
+}
+
+void zad_1();
+void zad_2();
+
+int main(){
+    srand(time(NULL));
+    unsigned int zad;
+    bool wyjscie = false;
+    do{
+        cout << "Podaj nr zadania:" << endl
+             << "0) - Wyscie" << endl
+             << "1) - Lista jednokierunkowa" << endl
+             << "2) - Lista dwukierunkowa"   << endl
+             << "3) - Lista jednokierunkowa cykliczna" << endl
+             << "4) - Lista dwukierunkowa cykliczna"   << endl
+             << ">>>>> ";
+        cin >> zad;
+        switch(zad){
+            case 1:
+                system("cls");
+                zad_1();
+                break;
+            case 0:
+                wyjscie = true;
+                break;
+            default:
+                system("cls");
+                break;
+        }
+    }while(!wyjscie);
+
+    return 0;
+}
+
+//JednoKierunkwy
+void add_tail_JK(single_list&l, int value){
+    element_JK *el = new element_JK;
+    el->number  = value;
+    el->next    = nullptr;
+
+    if(l.tail != nullptr)
+        l.tail->next = el;
+    else
+        l.head = el;
+
+    l.tail = el;
+    l.counter++;
+}
+void add_head_JK(single_list&l, int value){
+    element_JK *el = new element_JK;
+    el->number  = value;
+    el->next    = l.head;
+    l.head      = el;
+
+    if (l.tail == nullptr)
+        l.tail = el;
+    l.counter++;
+}
+void add_position_JK(single_list &l, int value, int position){
+    element_JK *el = new element_JK;
+    el->number  = value;
+    element_JK *temp = l.head;
+    for(int i=1; i < position-1; i++)
+        temp = temp->next;
+
+    el->next=temp->next;
+    temp->next=el;
+    l.counter++;
+}
+void delete_tail_JK(single_list &l){
+    element_JK *temp = l.tail;
+    if(l.counter == 1){
+        l.tail=nullptr;
+        l.head=nullptr;
+    }
+    else{
+        element_JK *bef_temp = l.head;
+        for(int i=1; i<l.counter-1; i++)
+            bef_temp=bef_temp->next;
+
+        l.tail=bef_temp;
+        l.tail->next=nullptr;
+    }
+    delete temp;
+}
+void delete_head_JK(single_list &l){
+    element_JK *temp = l.head;
+    l.head = l.head->next;
+    if (l.counter == 1)
+        l.tail = nullptr;
+    delete temp;
+    l.counter--;
+}
+void delete_position_JK(single_list &l, int position){
+    element_JK *prev = l.head;
+    for(int i=1; i<position-1; i++)
+        prev = prev->next;
+    element_JK *temp = prev->next;
+    prev->next = temp->next;
+    delete temp;
+    l.counter--;
+}
+void show_JK(single_list l){
+    element_JK *temp = l.head;
+    cout << "Lista jednokierunkowa: ";
+    for (int i = 1; i<=l.counter; i++){
+        cout << temp->number << " ";
+        temp=temp->next;
+    }
+}
+bool isEmpty_JK(single_list l){
+    if (l.tail == nullptr && l.head == nullptr)
+        return true;
+    return false;
+}
+//DwuKierunkowa
+void add_tail_DK(double_list &l, int value){
+    element_DK *el = new element_DK;
+    el->number = value;
+    el->next   = nullptr;
+    el->prev   = nullptr;
+    if(l.tail != nullptr){
+        l.tail->next = el;
+        el->prev     = l.tail;
+    }
+    else
+        l.head = el;
+    l.tail = el;
+    l.counter++;
+}
+void add_head_DK(double_list &l, int value){
+    element_DK *el = new element_DK;
+    el->number    = value;
+    el->next      = nullptr;
+    el->prev      = nullptr;
+
+    if(l.head != nullptr){
+        l.head->prev = el;
+        el->next     = l.head;
+    }
+    else
+        l.tail = el;
+    l.head = el;
+    l.counter++;
+}
+void add_position_DK(double_list &l, int value, int position){
+    element_DK *temp = l.head;
+    for(int i=1; i<position-1; i++)
+        temp=temp->next;
+    element_DK *el = new element_DK;
+    el->number     = value;
+    el->prev       = temp;
+    el->next       = temp->next;
+    temp->next->prev=el;
+    temp->next     = el;
+    l.counter++;
+}
+void delete_tail_DK(double_list &l){
+    element_DK *temp = l.tail;
+    if(l.counter==1){
+        l.tail = nullptr;
+        l.head = nullptr;
+    }
+    else{
+        l.tail = l.tail->prev;
+        l.tail->next=nullptr;
+    }
+    delete temp;
+    l.counter--;
+}
+void delete_head_DK(double_list &l){
+    element_DK *temp = l.head;
+    if(l.counter==1){
+        l.tail = nullptr;
+        l.head = nullptr;
+    }
+    else{
+        l.head = l.head->next;
+        l.head->prev=nullptr;
+    }
+    delete temp;
+    l.counter--;
+}
+void delete_position_DK(double_list &l, int position){
+    element_DK *temp = l.head;
+    for(int i=1; i<position-1; i++)
+        temp=temp->next;
+    element_DK *temp_us = temp->next;
+    temp->next = temp_us->next;
+    temp->next->prev = temp;
+    delete temp_us;
+    l.counter--;
+}
+void show_DK(double_list l){
+    element_DK *temp = l.head;
+    cout << "Lista dwukierunkowa: ";
+    for (int i = 1; i<=l.counter; i++){
+        cout << temp->number << " ";
+        temp=temp->next;
+    }
+}
+bool isEmpty_head_DK(double_list l){
+    if (l.head == nullptr)
+        return true;
+    return false;
+}
+bool isEmpty_tail_DK(double_list l){
+    if (l.tail == nullptr)
+        return true;
+    return false;
+}
+
+
+//Podstawa
+void zad_1(){
+    single_list lista;
+    lista.head = nullptr;
+    lista.tail = nullptr;
+    lista.counter = 1;
+
+    unsigned int zad;
+    bool wyjscie = false;
+    do{
+        cout << "Podaj nr dzialania:" << endl
+             << "1)  - Sprawdzenie czy lista jest pusta" << endl
+             << "2)  - Dodanie elementu na koniec listy" << endl
+             << "3)  - Dodanie elementu na poczatek listy"   << endl
+             << "4)  - Dodanie elementu na okreslona pozycje" << endl
+             << "5)  - Usuniecie elementu z konca listy"   << endl
+             << "6)  - Usuniecie elementu z poczatku listy" << endl
+             << "7)  - Usuniecie elementu znajdujacego sie na okreslonej pozycji" << endl
+             << "8)  - Pobranie pierwszego elementu z listy" << endl
+             << "9)  - Pobranie ostatniego elementu z listy" << endl
+             << "10) - Wyswietlenie ostatniego element" << endl
+             << "11) - Policzenie sredniej ary. elementow w liscie" << endl
+             << "12) - Znalezienie elementu maksymalnego w liscie" << endl
+             << "13) - Wyswietlenie calej listy" << endl
+             << "14) - Usuniecie calej listy" << endl
+             << "15) - Wyjscie" << endl
+             << ">>>>> ";
+
+        cin >> zad;
+
+        switch(zad){
+        case 1:
+            if (isEmpty_JK(lista))
+                cout << "Lista jest pusta!" << endl;
+            else
+                cout << "Lista ma " << lista.counter << " elemetow" << endl;
+            system("pause");
+            system("cls");
+            break;
+        case 15:
+            system("cls");
+            wyjscie = true;
+            break;
+        default:
+            system("cls");
+            break;
+        }
+
+
+    }while(!wyjscie);
+}
