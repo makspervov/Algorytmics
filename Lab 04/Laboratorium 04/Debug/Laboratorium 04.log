@@ -1,0 +1,4 @@
+﻿  Laboratorium 04.cpp
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\Lab 04\Laboratorium 04\Laboratorium 04.cpp(20,20): warning C4101: rob: неиспользованная локальная переменная
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\Lab 04\Laboratorium 04\Laboratorium 04.cpp(78,43): error C2660: FlagaPolska: функция не принимает 4 аргументов
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\Lab 04\Laboratorium 04\Laboratorium 04.cpp(18,6): message : см. объявление "FlagaPolska"

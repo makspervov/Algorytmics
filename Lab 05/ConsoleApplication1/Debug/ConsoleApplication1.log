@@ -1,0 +1,3 @@
+﻿  ConsoleApplication1.cpp
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\Lab 05\ConsoleApplication1\ConsoleApplication1.cpp(13,2): error C3861: "getline": identyfikatora nie odnaleziono
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\Lab 05\ConsoleApplication1\ConsoleApplication1.cpp(15,2): error C3861: "getline": identyfikatora nie odnaleziono

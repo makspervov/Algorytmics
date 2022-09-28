@@ -1,0 +1,2 @@
+﻿MSVCRTD.lib(exe_main.obj) : error LNK2019: nierozpoznany symbol zewnętrzny _main przywołany w funkcji "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
+C:\Users\Maksim\Documents\2 semestr\Podstawy algorytmiki\Lab 06\Laboratorium6\Debug\Laboratorium6.exe : fatal error LNK1120: liczba nierozpoznanych elementów zewnętrznych: 1
